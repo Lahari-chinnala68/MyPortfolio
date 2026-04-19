@@ -182,17 +182,24 @@ button:hover {
 #contact a:hover {
     color: #38bdf8;
 }
-
-/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
 
     header {
-        flex-direction: column;
+        flex-direction: row;              /* keep horizontal */
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;                 /* allow wrapping if needed */
+        justify-content: center;
     }
 
     nav a {
-        display: block;
-        margin: 10px 0;
+        margin: 5px 10px;                /* reduce spacing */
+        font-size: 14px;                 /* smaller text for mobile */
     }
 
     .hero h1 {
