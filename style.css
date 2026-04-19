@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0f172a;
+    color: #fff;
+}
+
+/* ================= NAVBAR ================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #020617;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* ================= HERO ================= */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #03031d, #1e293b);
+    text-align: center;
+}
+
+.hero span {
+    color: #f8eb38;
+}
+
+/* ================= SECTIONS ================= */
+section {
+    padding: 60px 20px;
+    text-align: center;
+
+    /* animation */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.6s;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= PROJECTS (SIDE BY SIDE) ================= */
+/* Title */
+.section-title {
+    margin-bottom: 30px;
+    font-size: 32px;
+    text-align: center;
+}
+
+/* Container (VERTICAL LINE BY LINE) */
+.projects-container {
+    display: flex;
+    flex-direction: column;   /* 🔥 key fix */
+    align-items: center;      /* center cards */
+    gap: 15px;
+}
+
+/* Card */
+.card {
+    width: 300px;             /* fixed width for neat look */
+    padding: 20px;
+    background: #f4f4f4;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.4);
+}
+
+/* ================= COLLEGE (TOP → DOWN) ================= */
+#college {
+    text-align: center;
+}
+
+#college .card {
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+/* ================= CARDS ================= */
+.card {
+    width: 300px;
+    padding: 20px;
+    margin: 15px;
+    background: #f4f4f4;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: #e2e2e2;
+}
+
+/* remove underline from college link */
+.card h3 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ================= BUTTON ================= */
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background: #38bdf8;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0ea5e9;
+}
+
+/* ================= CONTACT ================= */
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-box {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+.contact-box p {
+    margin: 10px 0;
+}
+
+/* remove anchor color */
+#contact a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #38bdf8;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .contact-box {
+        width: 90%;
+    }
+
+    button {
+        width: 80%;
+    }
+}
