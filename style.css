@@ -177,7 +177,7 @@ button:hover {
 }
 
 /* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
     nav a {
         font-size: 14px;
@@ -206,11 +206,11 @@ button:hover {
     button {
         width: 80%;
     }
-    @media only screen and (min-width: 200px) and (max-width: 700px) {
-    nav a {
-        font-size: 10px;
-        gap: 8px;
-    }
+    @media(max-width: 200px){
+    .nav a{
+     font-size: 10px;
+     gap: 8px;
+   } 
     .logo {
         font-size: 10px;
     }
