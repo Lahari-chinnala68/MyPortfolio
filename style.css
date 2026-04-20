@@ -176,11 +176,21 @@ button:hover {
     color: #38bdf8;
 }
 /* ================= RESPONSIVE ================= */
+/* Base styles */
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+/* Small devices */
 @media (max-width: 600px) {
+
+    nav {
+        gap: 10px;
+    }
 
     nav a {
         font-size: 14px;
-        gap:10px;
     }
 
     .logo {
@@ -195,10 +205,7 @@ button:hover {
         font-size: 16px;
     }
 
-    .card {
-        width: 90%;
-    }
-
+    .card,
     .contact-box {
         width: 90%;
     }
@@ -206,14 +213,20 @@ button:hover {
     button {
         width: 80%;
     }
-
-    @media only screen and (max-width: 200px) and (min-width:600px) {
-    nav a {
-        font-size: 10px;
-        gap: 8px;
-    }
-    .logo {
-        font-size: 10px;
-    }
 }
+
+/* Extra small devices */
+@media (max-width: 400px) {
+
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
 }
