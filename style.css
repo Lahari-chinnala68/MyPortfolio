@@ -175,11 +175,12 @@ button:hover {
 #contact a:hover {
     color: #38bdf8;
 }
-
-/* For mobile devices */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 600px) {
+
     nav a {
         font-size: 14px;
+        gap:10px;
     }
 
     .logo {
@@ -205,15 +206,14 @@ button:hover {
     button {
         width: 80%;
     }
-}
 
-/* For very small screens */
-@media (max-width: 200px) {
-    nav a {   /* ❗ remove dot before nav */
+    @media only screen and (min-width: 200px) {
+    nav a {
         font-size: 10px;
+        gap: 8px;
     }
-
     .logo {
         font-size: 10px;
     }
+}
 }
